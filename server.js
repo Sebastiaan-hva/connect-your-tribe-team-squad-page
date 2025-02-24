@@ -4,7 +4,7 @@ import { Liquid } from 'liquidjs';
 
 
 // Vul hier jullie team naam in
-const teamName = '';
+const teamName = 'spirit';
 
 
 const app = express()
