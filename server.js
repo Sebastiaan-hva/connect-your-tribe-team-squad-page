@@ -29,16 +29,22 @@ app.get('/', async function (request, response) {
   })
 })
 
-app.get('/student:id', async function (request, response) {
+
+
+
+// maak een get route voor een detailpagina met een route parameter en een id
+app.get('/detail:id', async function (request, response) {
 
   const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id);
-  
+
   const personDetailResponseJSON = await personDetailResponse.json();
 
   response.render('detail.liquid', {person: personDetailResponseJSON.data, squads: squadResponseJSON.data});
 });
 
-// maak een get route voor een detailpagina met een route parameter en een id
+// route voor alle eerstejaars uit de WHOISAPI
+// 'https://fdnd.directus.app/items/squad?filter={"_and":[{"cohort":"2425"},{"tribe":{"name":"FDND Jaar 1"}}]}' 
+
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',

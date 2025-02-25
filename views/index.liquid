@@ -1,14 +1,11 @@
 {% render 'partials/head.liquid' %}
 
-<ul>
-  {% for person in persons %}
-    <li><img src="https://github.com/{{ person.github_handle }}.png"><a href="/detail/{{ person.id }}">{{ person.name }} {{ person.team }} </a></li>
-  {% endfor %}
-</ul>
+
 
 {% for person in persons %}
-  <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
+  <li><a href="/student/{{ person.id }}"> {{ person.team }} <img src="{{ person.avatar }}" alt=""> {{ person.name }}</a></li>
 {% endfor %}
+
 
 
 <h1>Zet 'm op team {{ teamName }}!</h1>
