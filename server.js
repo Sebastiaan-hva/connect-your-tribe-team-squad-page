@@ -3,7 +3,7 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 
-// Vul hier jullie team naam in
+// ons team
 const teamName = 'spirit';
 
 
@@ -29,10 +29,16 @@ app.get('/', async function (request, response) {
   })
 })
 
-app.get('/detail', async function (request, response) {
-  response.render('detail.liquid')
-})
+app.get('/student:id', async function (request, response) {
 
+  const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id);
+  
+  const personDetailResponseJSON = await personDetailResponse.json();
+
+  response.render('detail.liquid', {person: personDetailResponseJSON.data, squads: squadResponseJSON.data});
+});
+
+// maak een get route voor een detailpagina met een route parameter en een id
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',
@@ -49,13 +55,16 @@ app.post('/', async function (request, response) {
   response.redirect(303, '/')
 })
 
-
+// poort nummer 
 app.set('port', process.env.PORT || 8000)
+
 
 if (teamName == '') {
   console.log('Voeg eerst de naam van jullie team in de code toe.')
 } else {
+
   app.listen(app.get('port'), function () {
+    // toon bericht in console en geef het portnummer mee
     console.log(`Application started on http://localhost:${app.get('port')}`)
   })
 }

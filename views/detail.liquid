@@ -1,1 +1,11 @@
+{% render 'partials/head.liquid' %}
+
 <h1>detail</h1>
+
+{% for message in messages %}
+    <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+    {% else %}
+    <p>Er zijn nog geen berichten voor dit team.</p>
+    {% endfor %}
+
+{% render 'partials/foot.liquid' %}
