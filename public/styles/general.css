@@ -2,7 +2,7 @@
 
 /* HUISSTIJL */
 body{
-    --background-img: url("./assets/background.png");
+    --background-img: url("./assets/background.jpg");
 
 /* Kleuren  */
     --card-background-color: #EAEAEA;
@@ -16,8 +16,8 @@ body{
     --font-size-header-m: 32px;
     --font-size-header-l: 48px;
 
-    --font-family-text: "rubik-bubbles-regular, sans-serif";
-    --font-family-details: "arial, sans-serif";
+    --font-family-text: "Rubik Bubbles", sans-serif;
+    --font-family-details: "Arial", sans-serif;
 
     --font-family: var(--font-family-text);
 
@@ -26,44 +26,62 @@ body{
     
 
 /* buttons */
-    --arrow-button-border-radius: ;
-    --arrow-burron-padding : ;
-    --arrow-button-background-color: ;
-    --arrow-button-text-color: ;
+    --arrow-button-border-radius: "";
+    --arrow-burron-padding: "";
+    --arrow-button-background-color: #8A0000;
+    --arrow-button-text-color: #FFFFFF;
 
-    --text-button-border-radius: ;
-    --text-burron-padding : ;
-    --text-button-background-color: ;
-    --text-button-text-color: ;
+    --text-button-border-radius: "";
+    --text-burron-padding: "";
+    --text-button-background-color: #8A0000;
+    --text-button-text-color: #FFFFFF;
 
     background-image: var(--background-img);
-    background-size: cover; 
+    background-size: 100% 100%; 
     background-position: center; 
     background-repeat: no-repeat;  
-    height: 100vh; 
-    width: 100%; 
     background-attachment: fixed;
-    
 }
 
-/* cards */
+/* card styles */
 
-.card { 
+li { 
     background-color: var(--card-background-color);
     color: var(--card-text-color);
-    border-radius: 10px;
-    padding: 20px auto;
+    border-radius: 5px;
+    padding: 20px 20px;
     padding-bottom: 20px; 
-    padding-top: 30px; 
+    padding-top: 20px; 
     margin: 20px;
     box-shadow: 0 4px 8px 0 var(--card-text-color);
     width: 300px;
     overflow: hidden;
+    
+    a {
+        text-decoration: none;
+        color: var(--card-text-color);
+    }
 }
 
-.canvas img {
-    width: 90%; 
-    height: auto; 
+li img {
+    align-items: center;
+
+    width: 100%;
+    height: auto;
     border-bottom: 2px solid var(--card-background-color); 
   }
 
+ p { 
+    font-family: var(--font-family-text);
+    color: var(--card-text-color);
+   
+ }
+
+ /* algemene styling */
+
+ h1 {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-header-l);
+    color: var(--text-color);
+    text-align: center;
+ }
