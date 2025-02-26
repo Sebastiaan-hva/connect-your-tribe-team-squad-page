@@ -1,2 +1,20 @@
-# Squad Page
-Ontwerp en maak samen met je team een website met NodeJS, Express, JSON en Liquid
+# Squad Page Team Spirit
+Titel
+
+## Beschrijving
+(video / foto) toevoegen
+sebas - index uitleggen
+
+anouar - detail uitleggen
+
+nayome - design keuzes uitleggen
+
+yamen - responsiveness beschrijven en interactie uitleggen
+
+## Kenmerken
+
+nodejs uitleggen
+
+## Installatie
+
+uitleggen hoe iemand het installeert
