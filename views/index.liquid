@@ -3,7 +3,24 @@
 
 <ul>
   {% for person in persons %}
-    <li><a href="/student/{{ person.id }}"> {{ person.team }} <img src="{{ person.avatar }}" alt=""> {{ person.name }}</a></li>
+    <li> <p>{{ person.team }} </p> <a href="/detail/{{ person.id }}">  <img src="{{ person.avatar }}" alt=""> {{ person.name }}</a></li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for person in persons %}
+    <li>
+      <section class="canvas">
+        <a href="/detail/{{ person.id }}">
+            <img src="{{ person.avatar }}" alt="{{ person.name }}" height="262px" width="250px">
+            <h3>{{ person.name }}</h3>
+            <p>Team: {{ person.team }}</p>
+ 
+            <button class="btn">Meer info</button>
+        </a>
+    </section>
+    </li>
+ 
   {% endfor %}
 </ul>
 

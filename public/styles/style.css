@@ -1,5 +1,21 @@
 
 /* layout dingen en styling */
-{
-    /* background-color: blue; */
+li{
+    display:flex;
+    flex-direction: column;
+    a{
+        display:flex;
+        flex-direction: column;
+    }
+    img{
+        max-width: 200px;
+        max-height:200px;
+    }
 }
+
+ul{
+    display:grid;
+
+}
+
+@media min width iets
