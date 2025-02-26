@@ -19,11 +19,11 @@ app.set('views', './views')
 app.use(express.urlencoded({extended: true}))
 
 
-app.get('/', async function (request, response) {
+app.get('/detail/:id', async function (request, response) {
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
   const messagesResponseJSON = await messagesResponse.json()
 
-  response.render('index.liquid', {
+  response.render('detail.liquid', {
     teamName: teamName,
     messages: messagesResponseJSON.data
   })
@@ -33,13 +33,13 @@ app.get('/', async function (request, response) {
 
 
 // maak een get route voor een detailpagina met een route parameter en een id
-app.get('/detail:id', async function (request, response) {
+app.get('/', async function (request, response) {
 
   const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id);
 
   const personDetailResponseJSON = await personDetailResponse.json();
 
-  response.render('detail.liquid', {person: personDetailResponseJSON.data, squads: squadResponseJSON.data});
+  response.render('index.liquid', {person: personDetailResponseJSON.data, squads: personDetailResponseJSON.data});
 });
 
 // route voor alle eerstejaars uit de WHOISAPI
@@ -58,7 +58,7 @@ app.post('/', async function (request, response) {
     }
   });
 
-  response.redirect(303, '/')
+  response.redirect(303, '/detail/:id')
 })
 
 // poort nummer 

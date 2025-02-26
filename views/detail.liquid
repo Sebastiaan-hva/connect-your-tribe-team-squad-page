@@ -2,6 +2,22 @@
 
 <h1>detail</h1>
 
+
+<h2>{{ person.name }}</h2>
+
+<h2>Voeg een bericht toe</h2>
+<form method="post" action="/">
+  <label>
+    Naam:
+    <input type="text" name="from" required>
+  </label>
+  <label>
+    Bericht:
+    <textarea name="text" required></textarea>
+  </label>
+  <button type="submit">Verstuur</button>
+</form>
+
 {% for message in messages %}
     <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
     {% else %}
