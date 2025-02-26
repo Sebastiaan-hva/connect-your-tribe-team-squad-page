@@ -1,34 +1,19 @@
 {% render 'partials/head.liquid' %}
 
 
+<ul>
+  {% for person in persons %}
+    <li><a href="/student/{{ person.id }}"> {{ person.team }} <img src="{{ person.avatar }}" alt=""> {{ person.name }}</a></li>
+  {% endfor %}
+</ul>
 
-{% for person in persons %}
-  <li><a href="/student/{{ person.id }}"> {{ person.team }} <img src="{{ person.avatar }}" alt=""> {{ person.name }}</a></li>
-{% endfor %}
+
+{{ person.team }}
 
 
 
 <h1>Zet 'm op team {{ teamName }}!</h1>
 
-<h2>Huidige berichten</h2>
 
-{% for message in messages %}
-<p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
-{% else %}
-<p>Er zijn nog geen berichten voor dit team.</p>
-{% endfor %}
-
-<h2>Voeg een bericht toe</h2>
-<form method="post" action="/">
-  <label>
-    Naam:
-    <input type="text" name="from" required>
-  </label>
-  <label>
-    Bericht:
-    <textarea name="text" required></textarea>
-  </label>
-  <button type="submit">Verstuur</button>
-</form>
 
 {% render 'partials/foot.liquid' %}

@@ -3,6 +3,11 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 
+// Haal alle eerstejaars squads uit de WHOIS API op van dit jaar (2024–2025)
+const squadResponse = await fetch('https://fdnd.directus.app/items/squad?filter={"_and":[{"cohort":"2425"},{"tribe":{"name":"FDND Jaar 1"}}]}')
+
+// Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+const squadResponseJSON = await squadResponse.json()
 // ons team
 const teamName = 'spirit';
 
@@ -34,13 +39,12 @@ app.get('/detail/:id', async function (request, response) {
 
 // maak een get route voor een detailpagina met een route parameter en een id
 app.get('/', async function (request, response) {
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=team&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
 
-  const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id);
+  const personResponseJSON = await personResponse.json()
 
-  const personDetailResponseJSON = await personDetailResponse.json();
-
-  response.render('index.liquid', {person: personDetailResponseJSON.data, squads: personDetailResponseJSON.data});
-});
+  response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
+})
 
 // route voor alle eerstejaars uit de WHOISAPI
 // 'https://fdnd.directus.app/items/squad?filter={"_and":[{"cohort":"2425"},{"tribe":{"name":"FDND Jaar 1"}}]}' 
