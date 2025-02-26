@@ -1,36 +1,21 @@
 {% render 'partials/head.liquid' %}
 
-
+<h1>Squadpage</h1>
 <ul>
   {% for person in persons %}
-    <li> <p>{{ person.team }} </p> <a href="/detail/{{ person.id }}">  <img src="{{ person.avatar }}" alt=""> {{ person.name }}</a></li>
+    <li>  <p> Team: {{ person.team }}  </p> <a href="/detail/{{ person.id }}">  <img src="{{ person.avatar }}" alt=""> {{ person.name }} ❤️</a></li>
   {% endfor %}
 </ul>
 
-<ul>
-  {% for person in persons %}
-    <li>
-      <section class="canvas">
-        <a href="/detail/{{ person.id }}">
-            <img src="{{ person.avatar }}" alt="{{ person.name }}" height="262px" width="250px">
-            <h3>{{ person.name }}</h3>
-            <p>Team: {{ person.team }}</p>
- 
-            <button class="btn">Meer info</button>
-        </a>
-    </section>
-    </li>
- 
-  {% endfor %}
-</ul>
+
 
 
 {{ person.team }}
 
 
-
-<h1>Zet 'm op team {{ teamName }}!</h1>
-
+<footer>
+<h1>{{ teamName }}</h1>
+</footer>
 
 
 {% render 'partials/foot.liquid' %}
