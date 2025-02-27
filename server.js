@@ -84,10 +84,11 @@ if (teamName == '') {
   })
 }
 app.post('/person/:id/like', async function (request, response) {
+  const personId = request.params.id; 
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',
     body: JSON.stringify({
-      for: `Team ${teamName} / Person ${request.params.id} / Like`,
+      for: `Team ${teamName} / Person ${personId} / Like`,
       from: '',
       text: ''
     }),
@@ -96,7 +97,7 @@ app.post('/person/:id/like', async function (request, response) {
     }
   });
 
-  response.redirect(303, `/person/${request.params.id}`)
+  response.redirect(303, `/person/$${personId}`)
 })
 
 app.post('/person/:id/unlike', async function (request, response) {
@@ -109,6 +110,6 @@ app.post('/person/:id/unlike', async function (request, response) {
     method: 'DELETE'
   });
 
-  response.redirect(303, `/person/${request.params.id}`)
+  response.redirect(303, `/person/$${personId}`)
 })
 
