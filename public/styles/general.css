@@ -52,14 +52,16 @@ li {
     padding: 20px 20px;
     padding-bottom: 20px; 
     padding-top: 20px; 
-    margin: 20px;
+    margin-top: 20px;
     box-shadow: 0 4px 8px 0 var(--card-text-color);
     width: 300px;
     overflow: hidden;
     
     a {
-        text-decoration: none;
+        font-family: var(--font-family-text);
         color: var(--card-text-color);
+        text-decoration: none;
+        align-items: center;
     }
 }
 
@@ -71,10 +73,11 @@ li img {
     border-bottom: 2px solid var(--card-background-color); 
   }
 
- p { 
+ li  p { 
     font-family: var(--font-family-text);
+    font-size: var(--font-size-text);
     color: var(--card-text-color);
-   
+    text-align: center;
  }
 
  /* algemene styling */
@@ -84,4 +87,16 @@ li img {
     font-size: var(--font-size-header-l);
     color: var(--text-color);
     text-align: center;
+    margin-bottom: 75px;
+ }
+
+ /* like button */
+
+ .like-button{ 
+    background-color: transparent;
+    color: rgba(1, 39, 69, 0.868);
+    border: none;
+    font-size: var(--font-size-header-l);
+    justify-content: left;
+    text-align: left;
  }

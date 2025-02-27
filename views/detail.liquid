@@ -1,46 +1,27 @@
 {% render 'partials/head.liquid' %}
 
-{% comment %} link naar homepage. navigeert vanaf public {% endcomment %}
-<a href="/">Back</a>
-
 <h1>detail</h1>
 
 
-<h2>{{ person.name }}</h2>
+<h2>{{ person }}</h2>
 
-<section>
-    <h2>{{ person.team }}</h2>
-
-    <img src="oufwoi" alt="test">
-
-    <a href=""></a>
-
-    <h3>{{ person.name }}</h3>
-
-
-    <h3>comments</h3>
-    <form method="post" action="/">
-        <label>
-            Naam:
-            <input type="text" name="from" required>
-        </label>
-        <label>
-            Bericht:
-            <textarea name="text" required></textarea>
-        </label>
-        <button type="submit">Verstuur</button>
-    </form>
-
-</section>
+<h2>Voeg een bericht toe</h2>
+<form method="post" action="/">
+  <label>
+    Naam:
+    <input type="text" name="from" required>
+  </label>
+  <label>
+    Bericht:
+    <textarea name="text" required></textarea>
+  </label>
+  <button type="submit">Verstuur</button>
+</form>
 
 {% for message in messages %}
     <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
     {% else %}
     <p>Er zijn nog geen berichten voor dit team.</p>
     {% endfor %}
-
-
-
-
 
 {% render 'partials/foot.liquid' %}

@@ -24,26 +24,20 @@ app.set('views', './views')
 app.use(express.urlencoded({extended: true}))
 
 
-
-
-
 app.get('/detail/:id', async function (request, response) {
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
-  const personResponse = await fetch('https://fdnd.directus.app/items/person/'+request.params.id)
-
   const messagesResponseJSON = await messagesResponse.json()
-  const personResponseJSON = await personResponse.json()
-  
 
   response.render('detail.liquid', {
     teamName: teamName,
-    messages: messagesResponseJSON.data,
-    person: personResponseJSON.data
+    messages: messagesResponseJSON.data
   })
 })
 
 
 
+
+// maak een get route voor een detailpagina met een route parameter en een id
 app.get('/', async function (request, response) {
   const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=team&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
 
@@ -51,9 +45,6 @@ app.get('/', async function (request, response) {
 
   response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
 })
-
-
-
 
 // route voor alle eerstejaars uit de WHOISAPI
 // 'https://fdnd.directus.app/items/squad?filter={"_and":[{"cohort":"2425"},{"tribe":{"name":"FDND Jaar 1"}}]}' 
@@ -87,3 +78,32 @@ if (teamName == '') {
     console.log(`Application started on http://localhost:${app.get('port')}`)
   })
 }
+app.post('/person/:id/like', async function (request, response) {
+  await fetch('https://fdnd.directus.app/items/messages/', {
+    method: 'POST',
+    body: JSON.stringify({
+      for: `Team ${teamName} / Person ${request.params.id} / Like`,
+      from: '',
+      text: ''
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  });
+
+  response.redirect(303, `/person/${request.params.id}`)
+})
+
+app.post('/person/:id/unlike', async function (request, response) {
+
+  const likesForPersonResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName} / Person ${request.params.id} / Like"}`)
+  const likesForPersonResponseJSON = await likesForPersonResponse.json()
+  const likesForPersonResponseID = likesForPersonResponseJSON.data[0].id
+
+  await fetch(`https://fdnd.directus.app/items/messages/${likesForPersonResponseID}`, {
+    method: 'DELETE'
+  });
+
+  response.redirect(303, `/person/${request.params.id}`)
+})
+
