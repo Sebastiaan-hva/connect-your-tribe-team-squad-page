@@ -1,9 +1,11 @@
 # Squad Page Team Spirit
-Titel
+
 
 ## Beschrijving
 (video / foto) toevoegen
-sebas - index uitleggen
+
+sebas - We hebben gebruik gemaakt van een voor loop die op basis van ons huidige filter op de route een voor 1 alle personen uit de WHOIS API ophaalt en weergeeft:
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/f3724843a8fb7bca90acff4cbac3a88e26c6cb19/views/index.liquid#L6-L19
 
 anouar - detail uitleggen
 
@@ -14,7 +16,7 @@ yamen - responsiveness beschrijven en interactie uitleggen
 ## Kenmerken
 Ik heb op bijna elke line wel comments toegevoegd dus het lijkt me handiger om de hele server.js file te bekijken maar hier zijn de belangrijkste dingen.
 
-(https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L1-L5)
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L1-L5
 
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L8-L17
 
@@ -32,3 +34,4 @@ binnenin de IDE open je de terminal en run je de volgende commands.
 Run eerst npm install in de Terminal om de juiste packages te installeren. 
 Run npm start om de code te laten runnen.
 Hierna draait de site lokaal op http://localhost:8000.
+
