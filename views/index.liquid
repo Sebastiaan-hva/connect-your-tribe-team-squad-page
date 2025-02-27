@@ -3,36 +3,30 @@
 <h1>Squadpage</h1>
 <ul>
   {% for person in persons %}
-    <li>  <p> Team: {{ person.team }} </p> 
-    <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
-    {% if liked %}
-      <form method="post" action="/person/{{ person.id }}/unlike">
-        <button type="submit" name="message" value="">Unlike 💔</button>
+    <li>  
+      <p> Team: {{ person.team }} </p> 
+      <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
+
+      <form method="post" class="like-form" data-id="{{ person.id }}">
+        {% if likedPersons[person.id] %}
+          <button type="submit" class="like-button" data-liked="true">Unlike 💔</button>
+        {% else %}
+          <button type="submit" class="like-button" data-liked="false">Like ❤️</button>
+        {% endif %}
       </form>
-    {% else %}
-      <form method="post" action="/person/{{ person.id }}/like">
-       <button type="submit">Like ❤️</button>
-      </form>
-    {% endif %}
-    <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
-    
-    {% assign birth_year = person.birthdate | date: "%Y" | plus: 0 %}
-            {% assign current_year = "now" | date: "%Y" | plus: 0 %}
-            {% assign age = current_year | minus: birth_year | minus: 1 %}
-            <p>age: {{ age }}</p>
-            </li>
+
+      <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
+
+      {% assign birth_year = person.birthdate | date: "%Y" | plus: 0 %}
+      {% assign current_year = "now" | date: "%Y" | plus: 0 %}
+      {% assign age = current_year | minus: birth_year | minus: 1 %}
+      <p>age: {{ age }}</p>
+    </li>
   {% endfor %}
 </ul>
 
-
-
-
-{{ person.team }}
-
-
 <footer>
-<h1>{{ teamName }}</h1>
+  <h1>{{ teamName }}</h1>
 </footer>
-
 
 {% render 'partials/foot.liquid' %}
