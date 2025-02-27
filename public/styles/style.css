@@ -45,6 +45,34 @@ ul {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+@keyframes like-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.like-button {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-button.liked {
+    background-color: #ff4081;
+    color: white;
+    animation: like-animation 0.5s ease-out;
+}
+
  
 footer {
     text-align: right;

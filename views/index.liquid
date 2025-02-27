@@ -6,15 +6,15 @@
     <li>  
       <p> Team: {{ person.team }} </p> 
       <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
-
+      
       <form method="post" class="like-form" data-id="{{ person.id }}">
         {% if likedPersons[person.id] %}
-          <button type="submit" class="like-button" data-liked="true">Unlike 💔</button>
+            <button type="submit" class="like-button liked">Unlike 💔</button>
         {% else %}
-          <button type="submit" class="like-button" data-liked="false">Like ❤️</button>
+            <button type="submit" class="like-button">Like ❤️</button>
         {% endif %}
       </form>
-
+  
       <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
 
       {% assign birth_year = person.birthdate | date: "%Y" | plus: 0 %}
