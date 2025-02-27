@@ -3,7 +3,11 @@
 <h1>Squadpage</h1>
 <ul>
   {% for person in persons %}
-    <li>  <p> Team: {{ person.team }}  </p> <a href="/detail/{{ person.id }}">  <img src="{{ person.avatar }}" alt=""></a>  </button></img><p> <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
+    <li>  <p> Team: {{ person.team }} </p> 
+    <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
+    <button class="like-button">♥</button> 
+    <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
+    
     {% assign birth_year = person.birthdate | date: "%Y" | plus: 0 %}
             {% assign current_year = "now" | date: "%Y" | plus: 0 %}
             {% assign age = current_year | minus: birth_year | minus: 1 %}
