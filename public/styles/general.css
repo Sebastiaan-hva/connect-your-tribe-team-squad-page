@@ -61,8 +61,7 @@ li {
         font-family: var(--font-family-text);
         color: var(--card-text-color);
         text-decoration: none;
-    
-
+        align-items: center;
     }
 }
 
@@ -93,8 +92,11 @@ li img {
 
  /* like button */
 
- .like button{ 
+ .like-button{ 
+    background-color: transparent;
+    color: rgba(1, 39, 69, 0.868);
     border: none;
-    font-size: var(--font-size-header-s);
-    
+    font-size: var(--font-size-header-l);
+    justify-content: left;
+    text-align: left;
  }
