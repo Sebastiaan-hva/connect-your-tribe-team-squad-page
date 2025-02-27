@@ -78,3 +78,10 @@ if (teamName == '') {
     console.log(`Application started on http://localhost:${app.get('port')}`)
   })
 }
+const likes = {}; // like list
+
+app.post('/like/:id', function (req, res) {
+    const personId = req.params.id;
+    likes[personId] = likes[personId] === 1 ? -1 : 1; // change between like and dislike
+    res.json({ status: likes[personId] });
+});

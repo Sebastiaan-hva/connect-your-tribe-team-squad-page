@@ -5,7 +5,9 @@
   {% for person in persons %}
     <li>  <p> Team: {{ person.team }} </p> 
     <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
-    <button class="like-button">♥</button> 
+    <button class="like-button" data-id="{{ person.id }}">
+    ♥ <span class="like-status">Like</span>
+    </button>
     <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
     
     {% assign birth_year = person.birthdate | date: "%Y" | plus: 0 %}
