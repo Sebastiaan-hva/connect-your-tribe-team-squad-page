@@ -115,14 +115,14 @@ li img {
 
 .notficatie {
     position: fixed;
-    top: 10px;
+    top: 50px;
     right: 20px;
     align-items: right;
     font-family: var(--font-family-text);
-    animation: slideInFade 2s ease forwards, slideOutFade 1s ease 20s forwards; 
+    animation: slideInFade 1s ease forwards, slideOutFade 1s ease 1s forwards; 
 
     p { 
-        background-color: #8A0000;
+        background-color: #8a0000a8;
         padding: 10px 20px;
         border-radius: 30px;
         color: white;
