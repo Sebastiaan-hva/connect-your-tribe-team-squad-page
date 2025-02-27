@@ -60,11 +60,15 @@ ul {
 
 .like-button {
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 8px 10px;
+    width: 100px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    justify-content: left;
+    text-align: left;
     transition: all 0.3s ease;
+
 }
 
 .like-button.liked {

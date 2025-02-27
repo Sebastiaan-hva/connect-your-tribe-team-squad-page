@@ -1,39 +1,46 @@
+
 {% render 'partials/head.liquid' %}
 
-<h1>detail</h1>
+<a href="/" class="back-link">Terug</a>
 
-<a href="/">Terug</a>
+<div class="notficatie">
+    <p>Laat een jaarboek quote achter :) ! </p>
+</div>
 
+<section class="card">
+    <h2 class="team-name">{{ person.team }}</h2>
 
-<section>
-    <h2>{{ person.team }}</h2>
+    <div class="card-top">
+        <img src="{{ person.avatar }}" alt="" class="profile-img">
 
-    <img src="oufwoi" alt="test">
+        <div class="comments-box">
+            <h2>Comments</h2>
+            {% for message in messages %}
+                <div class="comment">{{ message.from }}: {{ message.text }}</div>
+            {% else %}
+                <p class="no-messages">Er zijn nog geen berichten voor dit team.</p>
+            {% endfor %}
+        </div>
+    </div>
 
-    <a href="{{ person.website }}"><img src="" alt="">Website</a>
+    <h3 class="name-title">{{ person.name }}</h3> 
 
-    <h3>{{ person.name }}</h3>
-
-
-    <h3>Jaarboek Quote</h3>
-    <form method="post" action="/">
-        <label>
+    <h3 class="place-comment">Jaarboek Quote</h3>
+    <form method="post" action="/" class="form">
+        <label class="form-label">
             Naam:
-            <input type="text" name="from" required>
+            <input type="text" name="from" required class="input-field">
         </label>
-        <label>
-            Quote:
-            <textarea name="text" required></textarea>
+        <label class="form-label">
+            Comment:
+            <textarea name="text" required class="textarea-field"></textarea>
         </label>
-        <button type="submit">Verstuur</button>
+        <button type="submit" class="submit-button">Verstuur</button>
     </form>
-
 </section>
 
-{% for message in messages %}
-    <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
-    {% else %}
-    <p>Er zijn nog geen berichten voor dit team.</p>
-    {% endfor %}
+{% render 'partials/foot.liquid' %}
+
 
 {% render 'partials/foot.liquid' %}
+

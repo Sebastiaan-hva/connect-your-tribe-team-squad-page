@@ -43,7 +43,7 @@ body{
     background-attachment: fixed;
 }
 
-/* card styles */
+/*homepage*/
 
 li { 
     background-color: var(--card-background-color);
@@ -56,14 +56,24 @@ li {
     box-shadow: 0 4px 8px 0 var(--card-text-color);
     width: 300px;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
     
     a {
         font-family: var(--font-family-text);
         color: var(--card-text-color);
+        font-size: var(--font-size-header-s);
         text-decoration: none;
         align-items: center;
     }
-}
+
+
+
 
 li img {
     align-items: center;
@@ -88,15 +98,228 @@ li img {
     color: var(--text-color);
     text-align: center;
     margin-bottom: 75px;
+    animation: fadeIn 2s ease-in-out
  }
 
- /* like button */
+ @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
- .like-button{ 
-    background-color: transparent;
-    color: rgba(1, 39, 69, 0.868);
-    border: none;
-    font-size: var(--font-size-header-l);
-    justify-content: left;
-    text-align: left;
- }
+     
+/*detail page*/
+
+.notficatie {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    align-items: right;
+    font-family: var(--font-family-text);
+    animation: slideInFade 2s ease forwards, slideOutFade 1s ease 20s forwards; 
+
+    p { 
+        background-color: #8A0000;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: white;
+        font-size: var(--font-size-header-s);
+        width: 360px;
+    }
+}
+
+.notficatie {
+    align-items: right;
+    font-family: var(--font-family-text);
+    animation: slideInFade 2s ease forwards, slideOutFade 1s ease 20s forwards; 
+
+    p { 
+        background-color: #8A0000;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: white;
+        font-size: var(--font-size-header-s);
+        width: 360px;
+    }
+}
+
+@keyframes slideInFade {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutFade {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.back-link { 
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin: 20px;
+    font-family: var(--font-family-text);
+    color: var(--text-color);
+    font-size: var(--font-size-header-m);
+    }
+  
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+    background: var(--card-background-color);
+    color: var(--card-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+    
+
+    .team-name {
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-header-m);
+        color: var(--card-text-color);
+        text-align: center;
+        margin-bottom: 20px;
+        border: solid 5px #57AEFF;
+        border-radius: 200px;
+    }
+    
+    .card-top {
+            display: flex; 
+            align-items: justify-evenly; 
+            justify-content: center;
+            gap: 50px;
+            width: 100%;
+    }
+    
+    .profile-img {
+        max-width: 220px;
+        max-height: 500px; 
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-img:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+ 
+  
+   
+    .comments-box {
+        background: #a6c8da;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+        text-align: left;
+        max-height: 300px;
+        min-width: 50px;
+        overflow-y: auto;
+
+        h2 {
+            font-size: var(--font-size-header-s);
+            font-family: var(--font-family-text);
+        }
+    }
+    
+    .comment {
+        background: var(--card-background-color);
+        font-size: var(--font-size-text);
+        font-family: var(--font-family-details);
+        padding: 10px;
+        border-radius: 10px;
+        text-align: left;
+        max-height: 300px ;
+        margin-bottom: 10px; 
+    }
+    
+
+
+    .name-title {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-header-s);
+        color: var(--card-text-color);
+        text-align: center;
+    }
+
+    .place-comment {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--font-size-text);
+        text-align: center;
+        margin-top: -20px;
+
+       
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;  
+    }
+    
+    label {
+        font-family: var(--font-family-text);
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    
+    .submit-button {
+        background-color: var(--button-color);
+        color: var(--text-color);
+        font-size: var(--font-size-text);
+        font-family: var(--font-family-text);
+        padding: 15px 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        align-items: center;
+    }
+    
+    .submit-button :hover {
+        background-color: red;
+    }
+    
