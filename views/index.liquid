@@ -5,7 +5,7 @@
   {% for person in persons %}
     <li>  
       <p> Team: {{ person.team }} </p> 
-      <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
+      <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt="{{ person.name }}"></img></a> 
       
       <form method="post" class="like-form" data-id="{{ person.id }}">
         {% if likedPersons[person.id] %}
