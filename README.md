@@ -1,11 +1,14 @@
 # Squad Page Team Spirit
 
+We hebben een website voor ozne squad ontworpen en gemaakt met NodeJS en de WHOIS API en deze live gezet met render. 
+link site (https://connect-your-tribe-team-squad-page-kb0l.onrender.com/)
 
 ## Beschrijving
-We hebben een website voor ozne squad ontworpen en gemaakt met NodeJS en de WHOIS API en deze live gezet met render. link site (https://connect-your-tribe-team-squad-page-kb0l.onrender.com/)
+
 (video / foto) toevoegen
 
 sebas - We hebben gebruik gemaakt van een voor loop die op basis van ons huidige filter op de route een voor 1 alle personen uit de WHOIS API ophaalt en weergeeft:
+
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/f3724843a8fb7bca90acff4cbac3a88e26c6cb19/views/index.liquid#L6-L19
 
 anouar - detail uitleggen
