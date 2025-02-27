@@ -13,7 +13,8 @@ yamen - responsiveness beschrijven en interactie uitleggen
 
 ## Kenmerken
 Ik heb op bijna elke line wel comments toegevoegd dus het lijkt me handiger om de hele server.js file te bekijken maar hier zijn de belangrijkste dingen.
-[nodejs uitleggen](https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L1-L5)
+
+(https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L1-L5)
 
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L8-L17
 
