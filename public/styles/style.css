@@ -1,5 +1,6 @@
 
 /* layout dingen en styling */
+/* layout dingen en styling */
 body {
     line-height: 2;
     @media (min-width: 30em) {
@@ -7,7 +8,7 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
-
+ 
 footer {
     text-align: right;
     @media (min-width: 32em) {
@@ -26,12 +27,12 @@ li{
         max-height:200px;
     }
 }
-
+ 
 ul{
     display:grid;
-
+ 
 }
-
+ 
 @media min-width {
-    
+   
 }
