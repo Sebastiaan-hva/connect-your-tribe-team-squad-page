@@ -1,5 +1,20 @@
 
 /* layout dingen en styling */
+/* layout dingen en styling */
+body {
+    line-height: 2;
+    @media (min-width: 30em) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+ 
+footer {
+    text-align: right;
+    @media (min-width: 32em) {
+        text-align: center;
+    }
+}
 li{
     display:flex;
     flex-direction: column;
@@ -12,10 +27,12 @@ li{
         max-height:200px;
     }
 }
-
+ 
 ul{
     display:grid;
-
+ 
 }
-
-@media min width iets
+ 
+@media min-width {
+   
+}
