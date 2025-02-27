@@ -23,7 +23,7 @@ app.set('views', './views')
 
 app.use(express.urlencoded({extended: true}))
 
-
+// maak een get route voor een detailpagina met een route parameter en een id
 app.get('/detail/:id', async function (request, response) {
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
   const personResponse = await fetch('https://fdnd.directus.app/items/person/'+request.params.id)
@@ -42,7 +42,7 @@ app.get('/detail/:id', async function (request, response) {
 
 
 
-// maak een get route voor een detailpagina met een route parameter en een id
+// maakt een route aan voor de index pagina die iedereen met een squad ophaalt en ook gelijk filtered op squad op alfabetische volgorde.
 app.get('/', async function (request, response) {
   const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=team&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
 
@@ -51,8 +51,9 @@ app.get('/', async function (request, response) {
   response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
 })
 
-// route voor alle eerstejaars uit de WHOISAPI
-// 'https://fdnd.directus.app/items/squad?filter={"_and":[{"cohort":"2425"},{"tribe":{"name":"FDND Jaar 1"}}]}' 
+
+
+
 
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {

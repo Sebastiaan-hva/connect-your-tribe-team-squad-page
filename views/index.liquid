@@ -2,6 +2,9 @@
 
 <h1>Squadpage Class of 2026</h1>
 <ul>
+
+{% comment %} deze for loop laat 1 voor 1 alle personen zien uit de lijst persons. door ons filter inde route zijn dit alleen de mensen met teams. (dus alleen de eerstejaars + een paar docenten) {% endcomment %}
+
   {% for person in persons %}
     <li>  
       <p> Team: {{ person.team }} </p> 
@@ -23,6 +26,7 @@
       <p>age: {{ age }}</p>
     </li>
   {% endfor %}
+
 </ul>
 
 <footer>
