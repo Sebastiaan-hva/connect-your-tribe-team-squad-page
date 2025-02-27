@@ -5,9 +5,15 @@
   {% for person in persons %}
     <li>  <p> Team: {{ person.team }} </p> 
     <a href="/detail/{{ person.id }}"> <img src="{{ person.avatar }}" alt=""></img></a> 
-    <button class="like-button" data-id="{{ person.id }}">
-    ♥ <span class="like-status">Like</span>
-    </button>
+    {% if liked %}
+      <form method="post" action="/person/{{ person.id }}/unlike">
+        <button type="submit" name="message" value="">Unlike 💔</button>
+      </form>
+    {% else %}
+      <form method="post" action="/person/{{ person.id }}/like">
+       <button type="submit">Like ❤️</button>
+      </form>
+    {% endif %}
     <a href="/detail/{{ person.id }}"> {{ person.name }} </a>
     
     {% assign birth_year = person.birthdate | date: "%Y" | plus: 0 %}

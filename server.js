@@ -78,10 +78,32 @@ if (teamName == '') {
     console.log(`Application started on http://localhost:${app.get('port')}`)
   })
 }
-const likes = {}; // like list
+app.post('/person/:id/like', async function (request, response) {
+  await fetch('https://fdnd.directus.app/items/messages/', {
+    method: 'POST',
+    body: JSON.stringify({
+      for: `Team ${teamName} / Person ${request.params.id} / Like`,
+      from: '',
+      text: ''
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  });
 
-app.post('/like/:id', function (req, res) {
-    const personId = req.params.id;
-    likes[personId] = likes[personId] === 1 ? -1 : 1; // change between like and dislike
-    res.json({ status: likes[personId] });
-});
+  response.redirect(303, `/person/${request.params.id}`)
+})
+
+app.post('/person/:id/unlike', async function (request, response) {
+
+  const likesForPersonResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName} / Person ${request.params.id} / Like"}`)
+  const likesForPersonResponseJSON = await likesForPersonResponse.json()
+  const likesForPersonResponseID = likesForPersonResponseJSON.data[0].id
+
+  await fetch(`https://fdnd.directus.app/items/messages/${likesForPersonResponseID}`, {
+    method: 'DELETE'
+  });
+
+  response.redirect(303, `/person/${request.params.id}`)
+})
+
