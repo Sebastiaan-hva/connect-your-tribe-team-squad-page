@@ -26,11 +26,16 @@ app.use(express.urlencoded({extended: true}))
 
 app.get('/detail/:id', async function (request, response) {
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/'+request.params.id)
+
   const messagesResponseJSON = await messagesResponse.json()
+  const personResponseJSON = await personResponse.json()
+  
 
   response.render('detail.liquid', {
     teamName: teamName,
-    messages: messagesResponseJSON.data
+    messages: messagesResponseJSON.data,
+    person: personResponseJSON.data
   })
 })
 
