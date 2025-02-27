@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const personId = this.getAttribute('data-id');
             const button = this.querySelector('.like-button');
-            const isLiked = button.getAttribute('data-liked') === 'true';
+            const isLiked = button.classList.contains('liked');
 
             const url = isLiked ? `/person/${personId}/unlike` : `/person/${personId}/like`;
 
@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (isLiked) {
                 button.textContent = 'Like ❤️';
-                button.setAttribute('data-liked', 'false');
+                button.classList.remove('liked');
             } else {
                 button.textContent = 'Unlike 💔';
-                button.setAttribute('data-liked', 'true');
+                button.classList.add('liked');
             }
         });
     });
