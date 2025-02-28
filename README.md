@@ -41,6 +41,9 @@ https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb8901
 
 ## Responsive design(mobile first)
 Ik heb een min media toegevoegd aan die Ul list om die gebriuker krijg op mobile alleen een kaart te zien en op tablet 2 kaarten en op desktop 3 kaarten.
+
+![mobile-first](https://github.com/user-attachments/assets/1af374b9-77e6-4f72-afcd-1e03572c87e4)
+
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/145e6478b62f631d3b6d7eb4878b63ed387898f4/public/styles/style.css#L29-L47
 
 ##f
