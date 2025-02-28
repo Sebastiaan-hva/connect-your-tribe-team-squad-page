@@ -46,7 +46,10 @@ Ik heb een min media toegevoegd aan die Ul list om die gebriuker krijg op mobile
 
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/145e6478b62f631d3b6d7eb4878b63ed387898f4/public/styles/style.css#L29-L47
 
-##f
+## interactie 
+Hier te zien the website interactie en hoe kunt die gebruiker in ons website navigeren
+![user-story](https://github.com/user-attachments/assets/49f3837f-8493-4c7a-8d69-d8bd6284528f)
+![user-story2](https://github.com/user-attachments/assets/04e7d95d-f98e-4f75-af45-5229256360d4)
 
 
 ## Installatie
