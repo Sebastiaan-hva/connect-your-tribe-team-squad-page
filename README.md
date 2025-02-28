@@ -24,16 +24,7 @@ https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/f37248
 anouar - detail uitleggen
 
 
-## Kenmerken
-Ik heb op bijna elke line wel comments toegevoegd dus het lijkt me handiger om de hele server.js file te bekijken maar hier zijn de belangrijkste dingen.
 
-https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L1-L5
-
-https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L8-L17
-
-https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L53-L61
-
-https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L65-L83
 
 ## Responsive design(mobile first)
 Ik heb een min media toegevoegd aan die Ul list om die gebriuker krijg op mobile alleen een kaart te zien en op tablet 2 kaarten en op desktop 3 kaarten.
@@ -47,6 +38,16 @@ Hier te zien the website interactie en hoe kunt die gebruiker in ons website nav
 ![user-story](https://github.com/user-attachments/assets/49f3837f-8493-4c7a-8d69-d8bd6284528f)
 ![user-story2](https://github.com/user-attachments/assets/04e7d95d-f98e-4f75-af45-5229256360d4)
 
+## Kenmerken
+Ik heb op bijna elke line wel comments toegevoegd dus het lijkt me handiger om de hele server.js file te bekijken maar hier zijn de belangrijkste dingen.
+
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L1-L5
+
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L8-L17
+
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L53-L61
+
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L65-L83
 
 ## Installatie
 
