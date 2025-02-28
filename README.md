@@ -15,7 +15,7 @@ anouar - detail uitleggen
 
 nayome - design keuzes uitleggen
 
-yamen - responsiveness beschrijven en interactie uitleggen
+yamen - responsiveness beschrijven en interactie uitleggen- Ik heb die website responsive gemaakt voor ik heb de design als een mobile first. ik heb ook die like button proberen te maken en ook een animatie aan die like button toe gevoeg.
 
 ## Kenmerken
 Ik heb op bijna elke line wel comments toegevoegd dus het lijkt me handiger om de hele server.js file te bekijken maar hier zijn de belangrijkste dingen.
@@ -27,6 +27,14 @@ https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb8901
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L53-L61
 
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L65-L83
+
+## Responsive design(mobile first)
+Ik heb een min media toegevoegd aan die Ul list om die gebriuker krijg op mobile alleen een kaart te zien en op tablet 2 kaarten en op desktop 3 kaarten.
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/145e6478b62f631d3b6d7eb4878b63ed387898f4/public/styles/style.css#L29-L47
+
+##f
+
+
 ## Installatie
 
 Dit is een NodeJS project dat gebruik maakt van Express (5.0.1) en Liquidjs (10.21.0).
