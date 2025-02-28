@@ -51,6 +51,12 @@ https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb8901
 
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/fb89018ad72d3d3882ccc298f0a3c539d2f364ec/server.js#L65-L83
 
+*Leeftijd berekening*
+<p> in de database json stonden de leeftijden erin als datum. hierin heb ik dit omgerekent zodat op de squadpage de leeftijd zich op deze manier vertoond </p>
+<img width="92" alt="Scherm­afbeelding 2025-02-28 om 12 57 47" src="https://github.com/user-attachments/assets/0ab9d1cc-1752-4ba1-b6c6-0de01ae357a7" />
+
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/997aa88593bff6625f31b7803b9eec36e48b0ca8/views/index.liquid#L20-L26
+
 ## Installatie
 
 Dit is een NodeJS project dat gebruik maakt van Express (5.0.1) en Liquidjs (10.21.0).
