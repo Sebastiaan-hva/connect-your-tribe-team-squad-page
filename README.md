@@ -16,7 +16,6 @@ De website bestaat uit twee responsive webpagina:
 
 ### Beschrijving
 
-(video / foto) toevoegen
 
 sebas - We hebben gebruik gemaakt van een voor loop die op basis van ons huidige filter op de route een voor 1 alle personen uit de WHOIS API ophaalt en weergeeft:
 
@@ -24,9 +23,6 @@ https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/f37248
 
 anouar - detail uitleggen
 
-nayome - design keuzes uitleggen
-
-yamen - responsiveness beschrijven en interactie uitleggen- Ik heb die website responsive gemaakt voor ik heb de design als een mobile first. ik heb ook die like button proberen te maken en ook een animatie aan die like button toe gevoeg.
 
 ## Kenmerken
 Ik heb op bijna elke line wel comments toegevoegd dus het lijkt me handiger om de hele server.js file te bekijken maar hier zijn de belangrijkste dingen.
