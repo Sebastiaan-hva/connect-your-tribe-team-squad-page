@@ -1,9 +1,20 @@
 # Squad Page Team Spirit
 
+
 We hebben een website voor ozne squad ontworpen en gemaakt met NodeJS en de WHOIS API en deze live gezet met render. 
 link site (https://connect-your-tribe-team-squad-page-kb0l.onrender.com/)
 
-## Beschrijving
+De website bestaat uit twee responsive webpagina:
+
+<p>Squadpage</p>
+<img width="450" alt="Scherm­afbeelding 2025-02-28 om 10 06 03" src="https://github.com/user-attachments/assets/a6517c3f-3271-4dfe-9d98-973a4e6d1bfb" />
+<p>de squadpage bestaat uit alle twee de squad die gesorteerd zijn op team hierin zie je de verschillende studenten.</p>
+
+<p>detailpage</p>
+<img width="446" alt="Scherm­afbeelding 2025-02-28 om 10 06 30" src="https://github.com/user-attachments/assets/0bfc97ad-6fac-4476-b74f-cc7e602e5f4d" />
+<p>de detailpage kun je inzoomen op een student hier kom je door te klikken op de naam of foto van de student.</p>
+
+### Beschrijving
 
 (video / foto) toevoegen
 
