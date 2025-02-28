@@ -21,7 +21,9 @@ sebas - We hebben gebruik gemaakt van een voor loop die op basis van ons huidige
 
 https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/f3724843a8fb7bca90acff4cbac3a88e26c6cb19/views/index.liquid#L6-L19
 
-anouar - detail uitleggen
+detailpagina
+https://github.com/Sebastiaan-hva/connect-your-tribe-team-squad-page/blob/e9d1e551fd5ae786ded7be2551b84d139a2fa6a5/server.js#L33-L48
+ik had specifieke data nodig uit de link met iedereen zijn naam, hiervoor heb ik request.params.id gebruikt om te zorgen dat ik steeds bij elk persoon de date ophaal van dat id.
 
 
 
